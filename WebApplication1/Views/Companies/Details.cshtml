@@ -1,0 +1,43 @@
+﻿@model WebApplication1.Models.Companies
+
+@{
+    ViewBag.Title = "Детали";
+}
+
+
+<div>
+    <h4>Компании</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        @*<dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>*@
+        <dt>
+          Название
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
+        <dt>
+            Описание
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Description)
+        </dd>
+
+        <dt>
+            Сайт
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.WebSite)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Редактировать", "Edit", new { id = Model.ID }) |
+    @Html.ActionLink("Вернуться к списку", "Index")
+</p>
